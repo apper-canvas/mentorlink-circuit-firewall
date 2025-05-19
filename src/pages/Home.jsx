@@ -23,14 +23,6 @@ const Home = () => {
     exit: { opacity: 0, transition: { duration: 0.3 } }
   };
 
-  useEffect(() => {
-    const tempFunction = () => {
-      console.log('abcd');
-      temp();
-    }
-
-    tempFunction();
-  }, [])
 
   return (
     <motion.div

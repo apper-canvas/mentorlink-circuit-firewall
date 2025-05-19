@@ -8,6 +8,7 @@ import getIcon from './utils/iconUtils';
 // Import pages
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Component imports
 import MainFeature from './components/MainFeature';
@@ -71,10 +72,12 @@ function App() {
       </nav>
 
       <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ErrorBoundary>
       </AnimatePresence>
 
       <ToastContainer
