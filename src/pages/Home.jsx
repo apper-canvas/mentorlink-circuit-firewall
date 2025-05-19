@@ -23,6 +23,15 @@ const Home = () => {
     exit: { opacity: 0, transition: { duration: 0.3 } }
   };
 
+  useEffect(())=> {
+    const tempFunction = () => {
+      console.log('abcd');
+      temp();
+    }
+
+    tempFunction();
+  }, [])
+
   return (
     <motion.div
       className="container mx-auto px-4 py-8"
