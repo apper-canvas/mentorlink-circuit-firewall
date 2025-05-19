@@ -23,10 +23,6 @@ const Home = () => {
     exit: { opacity: 0, transition: { duration: 0.3 } }
   };
 
-    useEffect(() => {
-    console.log('abcd : ', abcd);
-  }, [])
-  
   return (
     <motion.div
       className="container mx-auto px-4 py-8"
